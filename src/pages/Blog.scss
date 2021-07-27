@@ -1,0 +1,251 @@
+@import "../assets/scss/all";
+
+.blog {
+  position: relative;
+
+  padding: 75px 0;
+
+  @include media_interval($media768, $media1024) {
+    padding: 60px 0;
+  }
+
+  @include media_interval(0, $media768) {
+    padding: 30px 0;
+  }
+
+  &__inner {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__top {
+    width: 100%;
+		margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media_interval(0, 500px) {
+      align-items: start;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      @include media_interval($media1024, 0) {
+        @include flex-columns(2, 80px, 0);
+      }
+      @include media_interval($media768, $media1024) {
+        @include flex-columns(2, 80px, 0);
+      }
+    }
+
+    &__pag {
+      display: inline-block;
+
+      @include font-size(100px, 130px);
+      font-weight: 600;
+      color: $black-light;
+    }
+
+    &__link {
+      &:hover,
+      &:focus {
+        & > .blog-list__header > .blog-list__title {
+          color: $yellow;
+        }
+
+        & > .blog-list__note,
+        & > .blog-list__date,
+				& > .blog-list__tags {
+          color: $yellow-dim;
+        }
+      }
+    }
+
+    &__title {
+      margin-bottom: 20px;
+
+      @include media_interval(0, $media1024) {
+        @include font-size(24px, 31px);
+      }
+
+      @include media_interval($media768, 0) {
+        margin-top: -60px;
+      }
+      @include media_interval(0, $media768) {
+        margin-top: -55px;
+      }
+    }
+
+    &__note {
+			margin-bottom: 10px;
+
+      @include font-second();
+      @include fontsize_default();
+      color: $grey-dark;
+    }
+
+		&__tags {
+			display: flex;
+
+			color: #a7a7a7;
+
+			&-title {
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}
+
+			&-item {
+				position: relative;
+
+				text-transform: capitalize;
+
+				&:not(:last-child) {
+					margin-right: 5px;
+				}
+			}
+		}
+
+    &__date {
+      margin-top: 10px;
+      display: block;
+
+      @include font-second();
+      @include font-size(14px, 17px);
+      color: $grey;
+    }
+
+    &__title,
+    &__text,
+    &__date,
+		&__tags {
+      transition: color 0.3s ease;
+    }
+  }
+}
+
+$checkbox_size: 20px;
+$checkbox_icon_size: (14px, 14px);
+$checkbox_icon_offset: (3px, 3px);
+$checkbox_background: #494949;
+$checkbox_border_width: 0;
+$checkbox_border_color: transparent;
+
+.checkboxes {
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media_interval(0, 500px) {
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:hover {
+      .checkboxes__text {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__input {
+    position: absolute;
+    width: auto;
+    left: -9999px;
+    opacity: 0;
+
+    &:checked {
+      & + .checkboxes__label {
+        &::before {
+          background-color: $yellow-dark;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &:focus {
+      & + .checkboxes__label .checkboxes__text {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+
+    min-height: $checkbox_size + 2 * $checkbox_border_width;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      top: 50%;
+      bottom: 50%;
+
+      transform: translateY(-50%);
+
+      width: $checkbox_size;
+      height: $checkbox_size;
+      z-index: 1;
+
+      background: $checkbox_background;
+      border: $checkbox_border_width solid $checkbox_border_color;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      bottom: 50%;
+      left: nth($checkbox_icon_offset, 1);
+
+      width: nth($checkbox_icon_size, 1);
+      height: nth($checkbox_icon_size, 2);
+      transform: translateY(-50%);
+      z-index: 1;
+
+      background: $sprite_url no-repeat -846px -152px;
+      opacity: 0;
+
+      transition: opacity 0.1s;
+    }
+  }
+
+  &__text {
+    margin-left: $checkbox_size + 16px;
+
+    @include font_size(20px, 26px);
+    text-transform: capitalize;
+
+    transition: opacity 0.3s;
+
+    @include media_interval(0, $media1024) {
+      @include font_size(18px, 26px);
+    }
+
+    &.error {
+      color: #a23333;
+
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+  }
+}

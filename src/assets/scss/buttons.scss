@@ -1,0 +1,95 @@
+.btn {
+  position: relative;
+
+  max-width: 100%;
+  min-width: 300px;
+  padding: 20px 20px 17px 20px;
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 1;
+
+  @include font-size(18px, 24px);
+  @include font_default();
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+  color: $black-light;
+
+  background: $yellow;
+  clip-path: polygon(90% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 0%);
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+
+  @include media_interval(0, $media768) {
+    padding: 21px 20px 19px 20px;
+
+    @include font-size(16px, 20.9px);
+  }
+
+  &--form {
+    margin-top: 40px;
+
+    @include media_interval(0, 375px) {
+      min-width: 100%;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background: $yellow-light;
+  }
+
+  &:active {
+    background: $yellow;
+  }
+
+  &--blog {
+    overflow: inherit;
+
+    color: $grey;
+
+    background: transparent;
+    border: 1px solid $grey;
+    clip-path: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      right: -18px;
+
+      width: 51px;
+      height: 26px;
+      transform: rotate(45deg);
+
+      background-color: #0f0f0f;
+      border-bottom: 1px solid $grey;
+      clip-path: polygon(0 100%, 50% 0, 100% 100%);
+    }
+
+    &:hover,
+    &:focus {
+      color: #0f0f0f;
+
+      background: $white;
+      border: 1px solid $white;
+
+      &::before {
+        border-color: $white;
+      }
+    }
+
+    &:active {
+      color: $grey;
+
+      background: transparent;
+      border: 1px solid $grey;
+
+      &::before {
+        border-color: $grey;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+//=======================
+// Точки для media-queries
+//=======================
+$media1200: 1200px;
+$media1024: 1024px;
+$media900: 900px;
+$media768: 768px;
+$media640: 640px;
+$media600: 600px;
+$media480: 480px;
+$media400: 400px;
+$media360: 360px;
+
+//=======================
+// Sprite
+//=======================
+$sprite_url: url(/static/sprite.svg);
+$sprite_width: 1072px;
+$sprite_height: 765px;
+
+//=======================
+// Цвета
+//=======================
+$white: #fff;
+$grey: #cecece;
+$grey-dark: #a7a7a7;
+$black: #000;
+$black-light: #1c1c1c;
+$yellow: #ffb606;
+$yellow-dark: #b28228;
+$yellow-light: #ffe606;
+$yellow-dim: #b69b68;
+$text_color: $white;
+$header_color: #132e5e;
+$text_color: $grey-dark;
+
+$animate-time: 0.4s;

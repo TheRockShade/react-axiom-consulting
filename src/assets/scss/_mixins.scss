@@ -1,0 +1,123 @@
+@mixin fontsize_default() {
+  @include font-size(16px, 25.6px);
+}
+
+@mixin fontsize_h1() {
+  @include font-size(80px, 104px);
+  @include media_interval($media768, $media1024) {
+    @include font-size(50px, 60px);
+  }
+  @include media_interval(0, $media768) {
+    @include font-size(40px, 48px);
+  }
+}
+
+@mixin fontsize_h1-dec() {
+  @include font-size(70px, 91px);
+  @include media_interval($media768, $media1024) {
+    @include font-size(64px, 83.2px);
+  }
+  @include media_interval(0, $media768) {
+    @include font-size(42px, 50.4px);
+  }
+}
+
+@mixin fontsize_h2() {
+  @include font-size(50px, 65px);
+  @include media_interval($media768, $media1024) {
+    @include font-size(40px, 48px);
+  }
+  @include media_interval(0, $media768) {
+    @include font-size(36px, 43.2px);
+  }
+}
+
+@mixin fontsize_h3() {
+  @include font-size(36px, 50px);
+  @include media_interval($media768, $media1024) {
+    @include font-size(30px, 39px);
+  }
+
+  @include media_interval(0, $media768) {
+    @include font-size(24px, 31px);
+  }
+}
+
+@mixin fontsize_h4() {
+  @include font-size(24px, 31px);
+  @include media_interval(0, $media1024) {
+    @include font-size(24px, 31.2px);
+  }
+}
+
+@mixin fontsize_h5() {
+  @include font-size(24px, 31.2px);
+  @include media_interval(0, $media1024) {
+    @include font-size(20px, 26px);
+  }
+}
+
+@mixin fontsize_h6() {
+  @include font-size(20px, 26px);
+  @include media_interval($media768, $media1024) {
+    @include font-size(18px, 21.6px);
+  }
+  @include media_interval(0, $media768) {
+    @include font-size(18px, 25.2px);
+  }
+}
+
+@mixin fontsize_p-card() {
+  @include font-size(14px, 18.2px);
+}
+
+@mixin fontsize_p-bold() {
+  @include font-size(16px, 22.4px);
+}
+
+@mixin fontsize_link() {
+  @include font-size(18px, 27px);
+  @include media_interval(0, $media1024) {
+    @include font-size(16px, 24px);
+  }
+}
+
+@mixin fontsize_desc() {
+  @include font_second;
+  @include font-size(16px, 24px);
+  @include media_interval(0, $media1024) {
+    @include font-size(14px, 24px);
+  }
+}
+
+@mixin fontsize_quote() {
+  @include font_default;
+  @include font-size(30px, 39px);
+  @include media_interval($media768, $media1024) {
+    @include font-size(28px, 36.4px);
+  }
+  @include media_interval(0, $media768) {
+    @include font-size(26px, 33.8px);
+  }
+}
+
+@mixin fontsize_nav() {
+  @include font-size(60px, 78px);
+  @include media_interval($media768, $media1024) {
+    @include font-size(40px, 52px);
+  }
+  @include media_interval(0, $media768) {
+    @include font-size(30px, 39px);
+  }
+}
+
+//=========================================
+//  Шрифты
+//=========================================
+@mixin font_default() {
+  font-family: "Konnect", Helvetica, sans-serif;
+}
+
+@mixin font_second() {
+  font-family: "Lato", Helvetica, sans-serif;
+}

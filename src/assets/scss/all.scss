@@ -1,0 +1,40 @@
+@import 'mixins/all';
+
+@import 'reset';
+@import 'conf';
+@import 'mixins';
+@import 'fonts';
+@import 'font_types';
+@import 'grid';
+@import 'buttons';
+@import 'text_styles';
+
+:root {
+  --vh: 100px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  @include font_default;
+  color: $white;
+
+  background-color: #0f0f0f;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.content {
+  overflow-x: hidden;
+}
+
+.overflow {
+  overflow: hidden;
+}

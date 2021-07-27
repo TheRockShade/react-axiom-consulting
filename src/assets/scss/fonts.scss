@@ -1,0 +1,39 @@
+@font-face {
+  src: url('/assets/fonts/Konnect-Light.woff2') format('woff2'),
+    url('/assets/fonts/Konnect-Light.woff') format('woff');
+  font-family: Konnect;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  src: url('/assets/fonts/Konnect-Regular.woff2') format('woff2'),
+    url('/assets/fonts/Konnect-Regular.woff') format('woff');
+  font-family: Konnect;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  src: url('/assets/fonts/Konnect-SemiBold.woff2') format('woff2'),
+    url('/assets/fonts/Konnect-SemiBold.woff') format('woff');
+  font-family: Konnect;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  src: url('/assets/fonts/Konnect-Bold.woff2') format('woff2'),
+    url('/assets/fonts/Konnect-Bold.woff') format('woff');
+  font-family: Konnect;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  src: url('/assets/fonts/Lato-Regular.woff2') format('woff2'),
+    url('/assets/fonts/Lato-Regular.woff') format('woff');
+  font-family: Lato;
+  font-weight: 400;
+  font-display: swap;
+}

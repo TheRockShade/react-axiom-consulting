@@ -1,0 +1,26 @@
+$max_width: 1400px;
+$column_gap: 14px;
+
+.grid-block {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $max_width;
+  background-clip: content-box;
+  box-sizing: border-box;
+  
+	@include media_interval($media1200, 0) {
+		padding: 0 110px;
+	}
+	@include media_interval($media1024, $media1200) {
+		padding: 0 54px;
+	}
+	@include media_interval($media768, $media1024) {
+		padding: 0 42px;
+	}
+	@include media_interval($media640, $media768) {
+		padding: 0 30px;
+	}
+	@include media_interval(0, $media640) {
+		padding: 0 20px;
+	}
+}

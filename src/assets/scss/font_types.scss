@@ -1,0 +1,59 @@
+.title-h1 {
+  font-weight: 600;
+  @include fontsize_h1;
+}
+
+.title-h1-dec {
+  font-weight: 600;
+  @include fontsize_h1-dec;
+}
+
+.title-h2 {
+  font-weight: normal;
+  @include fontsize_h2;
+}
+
+.title-h3 {
+  font-weight: normal;
+  @include fontsize_h3;
+}
+
+.title-h4 {
+  font-weight: normal;
+  @include fontsize_h4;
+}
+
+.title-h5 {
+  font-weight: normal;
+  @include fontsize_h5;
+}
+
+.title-h6 {
+  font-weight: normal;
+  @include fontsize_h6;
+}
+
+.font-card {
+	@include fontsize_p-card;
+}
+
+.font-bold {
+	@include fontsize_p-bold;
+}
+
+.font-link {
+	@include fontsize_link;
+}
+
+.font-desc {
+	@include fontsize_desc;
+}
+
+.font-quote {
+	font-weight: 300;
+	@include fontsize_quote;
+}
+
+.font-nav {
+	@include fontsize_quote;
+}
